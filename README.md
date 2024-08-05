@@ -45,7 +45,7 @@ CREATE TABLE crypto_prices (
     price DECIMAL(20, 2),
     formatted_price VARCHAR(50),
     volume_24 DECIMAL(20, 2),
-    timestamp VARCHAR(20),
+    timestamp VARCHAR(30),
     percent_change_1hr DECIMAL(5, 2),
     percent_change_24hr DECIMAL(5, 2),
     percent_change_7d DECIMAL(5, 2),
