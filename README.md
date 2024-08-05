@@ -33,8 +33,10 @@ requests: For making HTTP requests to the CoinMarketCap API.
 mysql-connector-python: For interacting with the MySQL database.
 python-dotenv: For loading environment variables from a .env file.
 logging: For handling and recording log messages.
-MySQL Database:
 
+Heyy 
+
+MySQL Database:
 The database should be set up with a table named crypto_prices with the following structure:
 CREATE TABLE crypto_prices (
     id INT AUTO_INCREMENT PRIMARY KEY,
