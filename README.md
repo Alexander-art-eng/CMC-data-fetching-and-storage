@@ -1,3 +1,6 @@
+# Project title: CryptoData collection and storage
+#### Video Demo: <https://youtu.be/yHKT-9WEQUI>
+#### Description:
 Crypto Data Collector
 This Python script is designed to fetch and store cryptocurrency data from the CoinMarketCap API into a MySQL database. It continuously monitors a specified cryptocurrency symbol, retrieves its latest data, and updates a database with relevant information. The script is configured to handle various types of errors gracefully and logs important events and issues.
 
