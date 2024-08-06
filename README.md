@@ -34,8 +34,6 @@ mysql-connector-python: For interacting with the MySQL database.
 python-dotenv: For loading environment variables from a .env file.
 logging: For handling and recording log messages.
 
-Heyy 
-
 MySQL Database:
 The database should be set up with a table named crypto_prices with the following structure:
 CREATE TABLE crypto_prices (
