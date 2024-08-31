@@ -1,7 +1,4 @@
-# A library to handle date and time-related tasks
-from datetime import datetime
-
-# A library to handle loggings and events
+# A library to handle logging and events
 import logging
 
 # A library to load environment variables from a .env file
@@ -28,13 +25,13 @@ logging.basicConfig(level=logging.INFO)
 # Read environment variable
 CMC_url = os.getenv("CMC_url")
 CMC_api_key = os.getenv("CMC_API_KEY")
-db_user = os.getenv("mysql_user")
-db_pass = os.getenv("mysql_password")
-db_host = os.getenv("mysql_host")
-db_name = os.getenv("mysql_database")
+db_user = os.getenv("MYSQL_USER")
+db_pass = os.getenv("MYSQL_PASSWORD")
+db_host = os.getenv("MYSQL_HOST")
+db_name = os.getenv("MYSQL_HOST")
 
 
-# Function to get the latest cryptocurrency data from coinmarketCap API
+# Function to get the latest cryptocurrency data from coinMarketCap API
 def get_crypto_data(crypto_symbol):
     url = CMC_url
     parameters = {"symbol": crypto_symbol, "convert": "USD"}
@@ -120,12 +117,6 @@ def store_data_in_db(crypto_data):
         percent_change_90d = (
             crypto_data.get("quote", {}).get("USD", {}).get("percent_change_90d", 0.0)
         )
-
-        # Convert the timestamp to a format compatible to the mysql DATETIME
-        # if timestamp != "No timestamp available":
-        #    timestamp = datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fz").strftime(
-        #        "%Y-%m-%d %H:%M:%S"
-        #    )
 
         insert_query = """INSERT INTO crypto_prices (name, symbol, market_cap, formatted_market_cap, price, formatted_price, volume_24, timestamp,
                         percent_change_1hr, percent_change_24hr, percent_change_7d, percent_change_30d, percent_change_60d, percent_change_90d) 
