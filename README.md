@@ -8,6 +8,7 @@
 This Python script is designed to fetch and store cryptocurrency data from the CoinMarketCap API into a MySQL database. 
 It continuously monitors a specified cryptocurrency symbol, retrieves its latest data, and updates a database with relevant information. 
 The script is configured to handle various types of errors gracefully and logs important events and issues.
+
 >Features:  
 >>Fetch Cryptocurrency Data: Retrieves the latest market data for a specified cryptocurrency symbol using the CoinMarketCap API.
 Store Data in MySQL Database: Inserts the retrieved data into a MySQL database, including details such as market cap, price, trading volume, and percent changes.

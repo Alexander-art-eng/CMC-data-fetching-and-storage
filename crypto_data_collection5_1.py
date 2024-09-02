@@ -142,7 +142,7 @@ def store_data_in_db(crypto_data):
         conn.commit()
         return True  # Indicate success
     except mysql.connector.Error as e:
-        print(f"Database error: {e}")
+        logging.error(f"Database error: {e}")
         return False  # Indicate failure
     finally:
         if cursor:
